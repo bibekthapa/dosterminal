@@ -18,7 +18,10 @@ public class program {
             System.out.print(path+">");
             while(!(line=reader.readLine()).equalsIgnoreCase("exit"))
             {
-                System.out.println(line);
+                
+                String tokens[]=line.split(" ");
+                System.out.println("The cmd is "+ tokens[0]);
+                
                 System.out.print(path+">"
                         );
             
