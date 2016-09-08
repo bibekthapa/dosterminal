@@ -16,7 +16,7 @@ public class RdCommand extends DosCommand{
     @Override
     public void execute(String[] params) {
         
-        if (params.length>1)
+        if (params.length>1 && params.length<3)
         {
         File file=new File(params[1]);
         file.delete();
