@@ -15,12 +15,12 @@ public class program {
             String path = pwd.getAbsolutePath();
             BufferedReader reader =new BufferedReader(new InputStreamReader(System.in));
             String line="";
+            System.out.print(path+">");
             while(!(line=reader.readLine()).equalsIgnoreCase("exit"))
             {
-                System.out.println(path+">"
-                        );
                 System.out.println(line);
-                
+                System.out.print(path+">"
+                        );
             
             }
             reader.close();
