@@ -5,6 +5,8 @@
  */
 package com.example.dosterminal.doscommand;
 
+import java.io.File;
+
 /**
  *
  * @author HOME
@@ -16,7 +18,8 @@ public class RdCommand extends DosCommand{
         
         if (params.length>1)
         {
-        
+        File file=new File(params[1]);
+        file.delete();
         }
         else
         {

@@ -9,6 +9,12 @@ package com.example.dosterminal.doscommand;
  *
  * @author HOME
  */
-public class CopyCommand {
+public class CopyCommand extends DosCommand{
+
+    @Override
+    public void execute(String[] params) {
+        
+//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

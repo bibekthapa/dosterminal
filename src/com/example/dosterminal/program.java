@@ -1,5 +1,7 @@
 package com.example.dosterminal;
 
+import com.example.dosterminal.doscommand.DosCommand;
+import com.example.dosterminal.doscommand.DosCommandFactory;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -20,7 +22,15 @@ public class program {
             {
                 
                 String tokens[]=line.split(" ");
-                System.out.println("The cmd is "+ tokens[0]);
+                DosCommand cmd = DosCommandFactory.get(tokens[0]);
+                if (cmd!=null)
+                        {
+                        cmd.execute(tokens);
+                        }
+                else
+                {
+                    System.out.println(""+tokens[0]+"is not recognized as internal or external command");
+                }
                 
                 System.out.print(path+">"
                         );

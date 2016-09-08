@@ -11,4 +11,36 @@ package com.example.dosterminal.doscommand;
  */
 public class DosCommandFactory {
     
+    public static DosCommand get(String key)
+    {
+       if(key.equalsIgnoreCase("md"))
+       {
+           return new MdCommand();
+       }
+       else if(key.equalsIgnoreCase("cd"))
+               {
+                   return new CdCommand();
+               }
+       else if(key.equalsIgnoreCase("rd"))
+               {
+                   return new RdCommand();
+               }
+       else if(key.equalsIgnoreCase("copy"))
+               {
+                   return new CopyCommand();
+               }
+       else if(key.equalsIgnoreCase("rename"))
+               {
+                   return new RenameCommand();
+               }
+       else if(key.equalsIgnoreCase("type"))
+               {
+                   return new TypeCommand();
+               }
+       else 
+           return null;
+    
+    
+    }
+    
 }

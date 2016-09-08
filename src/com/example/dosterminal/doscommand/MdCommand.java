@@ -5,6 +5,8 @@
  */
 package com.example.dosterminal.doscommand;
 
+import java.io.File;
+
 /**
  *
  * @author HOME
@@ -15,8 +17,9 @@ public class MdCommand extends DosCommand{
     public void execute(String[] params) {
         
         if (params.length>1)
-        {
-        
+            {
+         File file = new File(params[1]);
+         file.mkdir();
         }
         else
         {
